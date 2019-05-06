@@ -33,5 +33,9 @@ UnicodeLanguageIdentifierTest >> testRoot [
 	| id |
 	self
 		shouldnt: [ id := UnicodeLanguageIdentifier root ] raise: CLDRError;
-		assert: id isRoot
+		assert: id isRoot;
+		assert: id asString equals: 'root';
+		assert: id language equals: nil;
+		assert: id region equals: nil;
+		assert: id script equals: nil.
 ]

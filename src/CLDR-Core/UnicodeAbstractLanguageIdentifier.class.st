@@ -13,8 +13,8 @@ UnicodeAbstractLanguageIdentifier class >> fromString: aString [
 	result first
 		ifFalse: [ ^ CLDRError signal: 'Invalid language identifier ' , aString ].
 	^ UnicodeLanguageIdentifier new
-		language: result second;
-		region: result third;
+		setLanguage: result second
+		region: result third
 		script: result fourth;
 		yourself
 ]
@@ -36,4 +36,19 @@ UnicodeAbstractLanguageIdentifier >> isRoot [
 { #category : #testing }
 UnicodeAbstractLanguageIdentifier >> isValid [
 self subclassResponsibility 
+]
+
+{ #category : #accessing }
+UnicodeAbstractLanguageIdentifier >> language [
+ self subclassResponsibility 
+]
+
+{ #category : #accessing }
+UnicodeAbstractLanguageIdentifier >> region [
+	self subclassResponsibility
+]
+
+{ #category : #accessing }
+UnicodeAbstractLanguageIdentifier >> script [
+	self subclassResponsibility
 ]

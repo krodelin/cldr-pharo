@@ -21,3 +21,23 @@ UnicodeRootLanguageIdentifier >> asString [
 UnicodeRootLanguageIdentifier >> isRoot [
 	^true
 ]
+
+{ #category : #testing }
+UnicodeRootLanguageIdentifier >> isValid [
+	^true
+]
+
+{ #category : #accessing }
+UnicodeRootLanguageIdentifier >> language [
+	^nil
+]
+
+{ #category : #accessing }
+UnicodeRootLanguageIdentifier >> region [
+	^nil
+]
+
+{ #category : #accessing }
+UnicodeRootLanguageIdentifier >> script [
+	^nil
+]

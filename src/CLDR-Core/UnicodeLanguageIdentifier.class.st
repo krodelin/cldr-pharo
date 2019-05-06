@@ -36,19 +36,9 @@ UnicodeLanguageIdentifier >> language [
 	^ language
 ]
 
-{ #category : #'accessing-private' }
-UnicodeLanguageIdentifier >> language: aString [
-	language := aString
-]
-
 { #category : #accessing }
 UnicodeLanguageIdentifier >> region [
 	^ region 
-]
-
-{ #category : #'accessing-private' }
-UnicodeLanguageIdentifier >> region: aString [
-	region := aString
 ]
 
 { #category : #accessing }
@@ -56,7 +46,10 @@ UnicodeLanguageIdentifier >> script [
 	^ script 
 ]
 
-{ #category : #'accessing-private' }
-UnicodeLanguageIdentifier >> script: aString [
-	script := aString
+{ #category : #initialization }
+UnicodeLanguageIdentifier >> setLanguage: languageString region: regionString script: scriptString [
+language := languageString .
+region := regionString .
+script := scriptString 
+
 ]
